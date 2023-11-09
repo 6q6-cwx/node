@@ -1,0 +1,32 @@
+{
+  "name": "reacttwo-ssr",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm-run-all --parallel ssr:**",
+    "ssr:start": "nodemon --watch dist --exec node ./dist/bundle.js",
+    "ssr:build": "webpack --config webpack.server.js --watch"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/register": "^7.21.0",
+    "babel-loader": "^9.1.2",
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
